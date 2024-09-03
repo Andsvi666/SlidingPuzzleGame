@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.modalContent {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    background-color: rgb(73, 49, 88);
+    border: 4px solid rgb(194, 139, 19);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.mainHeader{
+    background-color: inherit;
+    color: rgb(194, 139, 19);
+}
+
+.settingsContainer{
+    width: 90%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: inherit;
+}
+
+.setting{
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 15px;
+    background-color:rgb(209, 159, 241);
+}
+
+.setting:hover{
+    cursor: pointer;
+    background-color: #e66988;
+}
+
+.selected{
+    scale: 1.5;
+    background-color: rgb(194, 139, 19);
+}
+
+.buttonsContainer{
+    width: 60%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: inherit;
+}
+
+.button{
+    width: 30%;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    border: 3px solid rgb(73, 49, 88);
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgb(194, 139, 19);
+    cursor: pointer;
+}
+
+.pageButton{
+    height: 30px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button:hover{
+    background-color: #e66988;
+}

@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model game_profiles {
+  id               Int           @id @default(autoincrement())
+  user             Int
+  selectedImage    Int           @default(1)
+  selectedSettings Int           @default(1)
+  game_settings    game_settings @relation(fields: [selectedSettings], references: [id], onUpdate: Restrict, map: "game_profiles_ibfk_1")
+  images           images        @relation(fields: [selectedImage], references: [id], onUpdate: Restrict, map: "game_profiles_ibfk_2")
+  user_profiles    user_profiles @relation(fields: [user], references: [id], onUpdate: Restrict, map: "game_profiles_ibfk_3")
+
+  @@index([selectedImage, selectedSettings], map: "selectedImage")
+  @@index([selectedSettings], map: "selectedSettings")
+  @@index([user], map: "user")
+}
+
+model game_results {
+  id              Int           @id @default(autoincrement())
+  time            Int
+  score           Int
+  isChallangeMode Boolean
+  player          Int
+  image           Int
+  settings        Int
+  resultsDate     DateTime      @default(now()) @db.Timestamp(0)
+  game_settings   game_settings @relation(fields: [settings], references: [id], onUpdate: Restrict, map: "game_results_ibfk_3")
+  user_profiles   user_profiles @relation(fields: [player], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "game_results_ibfk_4")
+  images          images        @relation(fields: [image], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "game_results_ibfk_5")
+
+  @@index([settings], map: "game_results_ibfk_3")
+  @@index([image, settings], map: "image")
+  @@index([player], map: "player")
+}
+
+model game_settings {
+  id             Int             @id @default(autoincrement())
+  difficultyName String          @db.VarChar(100)
+  imageSegments  Int
+  game_profiles  game_profiles[]
+  game_results   game_results[]
+}
+
+model images {
+  id            Int             @id @default(autoincrement())
+  imageName     String          @db.VarChar(100)
+  isApproved    Boolean
+  userAuthor    Int
+  uploadDate    DateTime        @default(now()) @db.Timestamp(0)
+  game_profiles game_profiles[]
+  game_results  game_results[]
+  user_profiles user_profiles   @relation(fields: [userAuthor], references: [id], onUpdate: Restrict, map: "images_ibfk_1")
+
+  @@index([userAuthor], map: "userAuthor")
+}
+
+model log_types {
+  id          Int           @id @default(autoincrement())
+  logtype     String        @db.VarChar(100)
+  server_logs server_logs[]
+}
+
+model server_logs {
+  id            Int           @id @default(autoincrement())
+  logText       String        @db.VarChar(250)
+  user          Int
+  type          Int
+  dateTime      DateTime      @default(now()) @db.Timestamp(0)
+  user_profiles user_profiles @relation(fields: [user], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "server_logs_ibfk_1")
+  log_types     log_types     @relation(fields: [type], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "server_logs_ibfk_2")
+
+  @@index([type], map: "type")
+  @@index([user], map: "user")
+}
+
+model user_profiles {
+  id               Int             @id @default(autoincrement())
+  username         String          @db.VarChar(100)
+  password         String          @db.VarChar(100)
+  type             Int
+  registrationDate DateTime        @default(now()) @db.Timestamp(0)
+  picturesCount    Int
+  game_profiles    game_profiles[]
+  game_results     game_results[]
+  images           images[]
+  server_logs      server_logs[]
+  user_types       user_types      @relation(fields: [type], references: [id], onUpdate: Restrict, map: "user_profiles_ibfk_1")
+
+  @@index([type], map: "type")
+}
+
+model user_types {
+  id            Int             @id @default(autoincrement())
+  usertype      String          @db.VarChar(100)
+  user_profiles user_profiles[]
+}

@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0px;
+}
+  
+.switchButton {
+  width: 30%;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(73, 49, 88);
+  color: rgb(194, 139, 19);
+  border: 3px solid rgb(194, 139, 19);
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.header{
+  font-size: 75px;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.switchButton:hover {
+  background-color: #e66988;
+  color: rgb(73, 49, 88);
+  border: 3px solid rgb(73, 49, 88);
+}

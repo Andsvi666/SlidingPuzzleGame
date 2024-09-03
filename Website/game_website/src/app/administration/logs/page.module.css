@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header{
+  font-size: 70px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 35px 20px;
+}

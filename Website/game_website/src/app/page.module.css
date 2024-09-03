@@ -1,0 +1,22 @@
+.container{
+    height: 100vh;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: url(
+        "https://images.unsplash.com/photo-1650963310446-011fc6a28367?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title{
+    font-size: 90px;
+    font-weight: bold;
+    padding: 10px;
+    background: none;
+    color: rgb(194, 139, 19);
+    text-shadow: rgb(73, 49, 88) 3px 0px 0px, rgb(73, 49, 88) 1.75517px 0.958851px 0px, rgb(73, 49, 88) 1.0806px 1.68294px 0px, rgb(73, 49, 88) 0.141474px 1.99499px 0px, rgb(73, 49, 88) -0.832294px 1.81859px 0px, rgb(73, 49, 88) -1.60229px 1.19694px 0px, rgb(73, 49, 88) -1.97999px 0.28224px 0px, rgb(73, 49, 88) -1.87291px -0.701566px 0px, rgb(73, 49, 88) -1.30729px -1.51361px 0px, rgb(73, 49, 88) -0.421592px -1.95506px 0px, rgb(73, 49, 88) 0.567324px -1.91785px 0px, rgb(73, 49, 88) 1.41734px -1.41108px 0px, rgb(73, 49, 88) 1.92034px -0.558831px 0px;
+}

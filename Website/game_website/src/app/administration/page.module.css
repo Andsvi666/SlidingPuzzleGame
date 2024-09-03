@@ -1,0 +1,91 @@
+.container {
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  padding: 0 40px;
+  font-weight: bold;
+}
+
+.logPanel{
+  width: 50%;
+  padding: 20px;
+  background-color:rgb(73, 49, 88);
+  color:rgb(194, 139, 19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.logHeader{
+  background-color: inherit;
+  color: inherit;
+}
+
+.managmentContainer
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.panel {
+  width: 25%;
+  height: 300px;
+  background-color:rgb(73, 49, 88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 8px;
+}
+
+.header{
+  background-color: inherit;
+  color: rgb(194, 139, 19);
+  font-size: 30px;
+  margin: 10px;
+  text-align: center;
+}
+
+.box{
+  height: 180px;
+  width: 70%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color:rgb(209, 159, 241);
+}
+
+.list{
+  height: 100%;
+  padding: 5% 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-radius: 8px;
+  background-color: inherit;
+}
+
+.listEntry{
+  background-color: inherit;
+}
+
+.panel:hover, .logPanel:hover{
+  scale: 1.3;
+  cursor: pointer;
+}
+
+.logPanel:hover{
+  color:rgb(73, 49, 88);
+  background-color: rgb(194, 139, 19);
+}
+
+.panel:hover .box {
+  background-color: rgb(194, 139, 19);
+}

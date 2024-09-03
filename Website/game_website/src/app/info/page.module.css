@@ -1,0 +1,48 @@
+.container{
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.segment{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text{
+    padding: 15px;
+    height: 400px;
+    width: 40%;
+    border: 5px solid rgb(194, 139, 19);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(73, 49, 88);;
+    color: rgb(194, 139, 19);
+}
+
+.header{
+    font-size: 40px;
+    padding-bottom: 40px;
+    background-color: inherit;
+    color: inherit;
+}
+
+.parag{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: inherit;
+    color: inherit;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}

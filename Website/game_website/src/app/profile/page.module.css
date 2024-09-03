@@ -1,0 +1,259 @@
+.container{
+    padding:70px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* User Info */
+
+.userContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.userProfileContainer{
+    margin-top: 40px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.infoList{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    border: 5px solid rgb(194, 139, 19);
+    border-radius: 10px;
+    background-color: rgb(73, 49, 88);
+    color: rgb(194, 139, 19);
+    gap: 15px
+}
+
+.listEntry{
+    background-color: inherit;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    background-color: inherit;
+    color: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: inherit;
+    color: inherit;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.listEntryName{
+    width: 48%;
+    background-color: inherit;
+    color: inherit;
+    text-align: end;
+    text-wrap: nowrap;
+}
+
+.listText{
+    width: 48%;
+    text-align: start;
+    background-color: inherit;
+    color: inherit;
+}
+
+.clickToReveal{
+    width: 38%;
+    margin-right: 10%;
+    text-align: center;
+    background-color: rgb(194, 139, 19);
+    border-radius: 8px;
+    padding: 0px 5px;
+}
+
+.clickToReveal:hover{
+    cursor: pointer;
+    background-color: #e66988;
+}
+
+.userButton{
+    width: 40%;
+    height: 70px;
+    font-size: 20px;
+}
+
+/* Game Profiles */
+
+.profilesContainer{
+    height: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.profiles{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+
+
+.profileButton{
+    width: 20vw;
+    height: 40px;
+    text-align: center;
+}
+
+.selectedProfileContainer{
+    width: 35vw;
+    margin-top: 25px;
+    padding: 10px 30px;
+    border: 5px solid rgb(194, 139, 19);
+    border-radius: 10px;
+    background-color: rgb(73, 49, 88);
+    color: rgb(194, 139, 19);
+    border-radius: 10px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profileInfo{
+    background-color: inherit;
+    color: rgb(194, 139, 19);
+}
+
+.profileInputContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: inherit;
+}
+
+.profileInputDropdown{
+    border: 3px solid rgb(73, 49, 88);
+    padding: 5px;
+    background-color: rgb(194, 139, 19);
+}
+
+.profileInputButton{
+    width: 120px;
+}
+
+.profileConfirmButton{
+    width: 50%;
+    height: 30px;
+}
+
+/* Game Images */
+
+.imagesContainer{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.imagesCollumns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.uploadContainer{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border: 5px solid rgb(194, 139, 19);
+    border-radius: 10px;
+    background-color: rgb(73, 49, 88);
+    color: rgb(194, 139, 19);
+}
+
+.uploadText{
+    background-color: inherit;
+    color: inherit;
+    font-size: 20px;
+}
+
+.imagesButton{
+    width: 50%;
+}
+
+.uploadInput{
+    display: none;
+}
+
+
+.exampleContainer{
+    border: 5px solid rgb(73, 49, 88);
+    background-color: rgb(194, 139, 19);
+    border-radius: 10px;
+    height: 400px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.exampleContentContainer{
+    background-color: inherit;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.exampleImage{
+    width: 420px;
+    padding: 5px 5px  0px 5px;
+    background-color: inherit;
+}
+
+.listExample{
+    background-color: inherit;
+    text-align: left;
+    font-weight: bold;
+}
+
+.listExampleEntry{
+    margin-left: 20px;
+    background-color: inherit;
+}
+
+.userButton, .profileButton, .profileInputButton, .imagesButton, .profileConfirmButton{
+    background-color: rgb(194, 139, 19);
+    border: 3px solid rgb(73, 49, 88);
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.userButton:hover, .profileButton:hover, .profileInputButton:hover, .imagesButton:hover, .profileConfirmButton:hover {
+    cursor: pointer;
+    background-color: #e66988;
+}
+
+.header{
+    font-size: 50px;
+}
